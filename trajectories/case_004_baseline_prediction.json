@@ -1,0 +1,9 @@
+{
+    "scenario_id": "case_004",
+    "should_abstain": false,
+    "dominant_cause": "inventory_shortage",
+    "affected_region": "South",
+    "affected_product": "Clothing",
+    "estimated_impact": 1916.25,
+    "explanation": "Overall daily revenue dropped by approximately $2440 after 2026-08-15. The dominant cause is an inventory shortage for 'Clothing' in the 'South' region. After 2026-08-15, the 'units_sold' for South Clothing consistently equaled 'inventory', while the 'orders' (demand) were significantly higher, indicating substantial lost sales. The average daily potential revenue lost for South Clothing due to this shortage is estimated at $1916.25. There was also a notable conversion rate drop for North Electronics, contributing approximately $1686/day to the overall decline, but the inventory shortage represents a direct, hard constraint on sales volume."
+}

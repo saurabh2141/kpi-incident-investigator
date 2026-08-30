@@ -1,0 +1,42 @@
+{
+    "scenario_id": "case_004",
+    "should_abstain": true,
+    "dominant_cause": null,
+    "affected_region": null,
+    "affected_product": null,
+    "estimated_impact": null,
+    "explanation": "No hypothesis dominates. Top candidate explains only 49.10% of modeled candidate impact. 1.  **Meaningful executable evidence?** All hypotheses present meaningful executable evidence. Candidate 1 (North/Electronics conversion rate drop) shows a significant 33.81% mechanism change. Candidate 2 (South/Clothing inventory shortage) has direct evidence of 17 constrained rows. Candidate 3 (North/Clothing conversion rate drop) has a smaller, but identified, 4.36% mechanism change.\n\n2.  **Multiple explanations comparable?** Yes, the two leading explanations, Candidate 1 (North/Electronics conversion rate drop) and Candidate 2 (South/Clothing inventory shortage), are highly comparable, contributing 49.1% and 47.2% of the total estimated impact, respectively.\n\n3.  **One explanation clearly dominate?** No, neither Candidate 1 nor Candidate 2 clearly dominates. They both account for a substantial and nearly equal share of the overall decline.\n\n4.  **Cautious or abstain?** The system should be cautious. The incident appears to be driven by multiple, distinct factors (a conversion rate drop in North/Electronics and an inventory shortage in South/Clothing) that have very similar, significant impacts.",
+    "evidence_candidates": [
+        {
+            "cause": "conversion_rate_drop",
+            "region": "North",
+            "product": "Electronics",
+            "impact": 29378.225254544755,
+            "mechanism_change_pct": 33.812153406430326,
+            "segment_revenue_before": 4922.222222222223,
+            "segment_revenue_after": 3329.4117647058824,
+            "impact_share": 0.49100810207065626
+        },
+        {
+            "cause": "inventory_shortage",
+            "region": "South",
+            "product": "Clothing",
+            "impact": 28260.0,
+            "constrained_rows": 17,
+            "mechanism_change_pct": null,
+            "segment_revenue_before": 2929.3333333333335,
+            "segment_revenue_after": 1337.6470588235295,
+            "impact_share": 0.47231882948307685
+        },
+        {
+            "cause": "conversion_rate_drop",
+            "region": "North",
+            "product": "Clothing",
+            "impact": 2194.2400971516545,
+            "mechanism_change_pct": 4.363278409256015,
+            "segment_revenue_before": 2970.6666666666665,
+            "segment_revenue_after": 2798.823529411765,
+            "impact_share": 0.03667306844626689
+        }
+    ]
+}

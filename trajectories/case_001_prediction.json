@@ -1,0 +1,22 @@
+{
+    "scenario_id": "case_001",
+    "should_abstain": false,
+    "dominant_cause": "inventory_shortage",
+    "affected_region": "South",
+    "affected_product": "Electronics",
+    "estimated_impact": 68900.0,
+    "explanation": "Top hypothesis explains 100.00% of modeled candidate impact. 1.  **Which hypotheses have meaningful executable evidence?**\n    The `inventory_shortage` hypothesis for \"South/Electronics\" has meaningful executable evidence. It identifies 17 `constrained_rows` and shows a significant revenue drop in that segment from 5040.0 to 947.06.\n\n2.  **Are multiple explanations comparable?**\n    No, only one candidate explanation was provided by the deterministic evidence tools.\n\n3.  **Does one explanation clearly dominate?**\n    Yes, this single explanation clearly dominates. It is the only candidate provided and has an `impact_share` of 1.0, indicating it fully accounts for the observed decline according to the tool.\n\n4.  **Should the system be cautious or abstain?**\n    The system should proceed with caution. While there is strong evidence of a problem in the affected segment (significant revenue drop, constrained rows), the `mechanism_change_pct` is null. This means the direct causal strength of the `inventory_shortage` in relation to the *overall* KPI change is not fully quantified. However, the existing evidence is strong enough to warrant action rather than abstaining.",
+    "evidence_candidates": [
+        {
+            "cause": "inventory_shortage",
+            "region": "South",
+            "product": "Electronics",
+            "impact": 68900.0,
+            "constrained_rows": 17,
+            "mechanism_change_pct": null,
+            "segment_revenue_before": 5040.0,
+            "segment_revenue_after": 947.0588235294117,
+            "impact_share": 1.0
+        }
+    ]
+}

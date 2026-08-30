@@ -1,0 +1,49 @@
+{
+    "scenario_id": "case_011",
+    "scenario_type": "no_dominant_cause_with_red_herrings",
+    "user_question": "Why did overall revenue drop after 2026-08-15?",
+    "target_kpi": "revenue",
+    "direction": "decrease",
+    "dominant_cause": null,
+    "should_abstain": true,
+    "expected_behavior": "Identify several modest contributors, reject the non-causal red herrings, and abstain from declaring one dominant root cause.",
+    "contributors": [
+        {
+            "cause": "traffic_drop",
+            "region": "North",
+            "product": "Electronics",
+            "expected_impact": 8400.0,
+            "impact_share": 0.34539473684210525
+        },
+        {
+            "cause": "price_drop",
+            "region": "South",
+            "product": "Electronics",
+            "expected_impact": 8600.0,
+            "impact_share": 0.3536184210526316
+        },
+        {
+            "cause": "conversion_rate_drop",
+            "region": "North",
+            "product": "Clothing",
+            "expected_impact": 7320.0,
+            "impact_share": 0.30098684210526316
+        }
+    ],
+    "red_herrings": [
+        {
+            "type": "marketing_spend_drop",
+            "region": "South",
+            "product": "Clothing"
+        },
+        {
+            "type": "inventory_drop_without_stockout",
+            "region": "South",
+            "product": "Clothing"
+        }
+    ],
+    "total_expected_impact": 24320.0,
+    "dominance_threshold": 0.5,
+    "incident_start": "2026-08-15",
+    "random_seed": 462
+}

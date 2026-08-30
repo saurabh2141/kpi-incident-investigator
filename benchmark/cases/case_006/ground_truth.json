@@ -1,0 +1,26 @@
+{
+    "scenario_id": "case_006",
+    "scenario_type": "dominant_cause_with_red_herrings",
+    "user_question": "Why did overall revenue drop after 2026-08-15?",
+    "target_kpi": "revenue",
+    "direction": "decrease",
+    "dominant_cause": "traffic_drop",
+    "affected_region": "South",
+    "affected_product": "Clothing",
+    "incident_start": "2026-08-15",
+    "should_abstain": false,
+    "expected_impact": 23760.0,
+    "red_herrings": [
+        {
+            "type": "marketing_spend_drop",
+            "region": "North",
+            "product": "Electronics"
+        },
+        {
+            "type": "returns_spike",
+            "region": "North",
+            "product": "Clothing"
+        }
+    ],
+    "random_seed": 252
+}

@@ -1,0 +1,9 @@
+{
+    "scenario_id": "case_010",
+    "should_abstain": true,
+    "dominant_cause": null,
+    "affected_region": null,
+    "affected_product": null,
+    "estimated_impact": 5200,
+    "explanation": "Overall daily revenue dropped by approximately $5200 after 2026-08-15. This decline is attributed to two nearly equally impactful factors, rather than a single dominant cause: \n1. A significant and sustained drop in conversion rate for 'North' region's 'Clothing' product. The conversion rate plummeted from typical levels (around 4-5%) to approximately 1.5% from 2026-08-15 onwards, leading to an estimated daily revenue loss of ~$2200 for this segment.\n2. A severe and consistent inventory shortage for 'South' region's 'Electronics' product. Starting 2026-08-15, available inventory consistently capped orders far below potential demand (orders were frequently 25-35 units while demand was 40-65 units daily). This resulted in an estimated daily revenue loss of ~$2300 for this segment.\n\nSince both issues have a comparable and substantial impact on overall revenue, it is not possible to identify one as the dominant cause. No significant changes in price, overall visitor traffic, or conversion rates/inventory in other segments were observed to explain the overall drop."
+}

@@ -1,0 +1,13 @@
+{
+    "scenario_id": "case_001",
+    "scenario_type": "single_dominant_cause",
+    "target_kpi": "revenue",
+    "direction": "decrease",
+    "dominant_cause": "inventory_shortage",
+    "affected_region": "South",
+    "affected_product": "Electronics",
+    "incident_start": "2026-08-15",
+    "should_abstain": false,
+    "expected_impact": 68900.0,
+    "random_seed": 42
+}

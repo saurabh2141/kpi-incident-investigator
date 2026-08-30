@@ -1,0 +1,9 @@
+{
+    "scenario_id": "case_009",
+    "should_abstain": false,
+    "dominant_cause": "price_drop",
+    "affected_region": "South",
+    "affected_product": "Clothing",
+    "estimated_impact": 1213.38,
+    "explanation": "Overall average daily revenue dropped from $22272.17 (before 2026-08-15) to $18714.75 (after 2026-08-15), representing a total decrease of $3557.42. The most significant individual factor contributing to this decline is a price drop for 'Clothing' in the 'South' region. The price for this product was reduced from $60 to $33 (a 45% decrease) starting on 2026-08-15. This price change alone accounts for an estimated daily revenue loss of $1213.38 (calculated as the average units sold after the drop multiplied by the price difference: 44.94 units * ($60 - $33)). This impact is the largest single component of the overall revenue drop, surpassing other significant factors like traffic declines in other product categories."
+}

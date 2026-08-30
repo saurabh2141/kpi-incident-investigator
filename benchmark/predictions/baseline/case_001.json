@@ -1,0 +1,9 @@
+{
+    "scenario_id": "case_001",
+    "should_abstain": false,
+    "dominant_cause": "inventory_shortage",
+    "affected_region": "South",
+    "affected_product": "Electronics",
+    "estimated_impact": 65900,
+    "explanation": "Overall daily revenue dropped from an average of $15,099 (Aug 1-14) to $12,066 (Aug 16-31). This decline is overwhelmingly driven by a severe inventory shortage for Electronics products in the South region. Prior to 2026-08-15, South Electronics generated an average of $4,586 daily. From 2026-08-15 onwards, actual sales for South Electronics plummeted to an average of $947 daily. During this period, the 'units_sold' column for South Electronics consistently matched the 'inventory' column, while 'orders' remained significantly higher. This indicates a consistent inability to fulfill customer demand due to insufficient stock. The estimated lost revenue from unfulfilled orders for South Electronics between 2026-08-15 and 2026-08-31 is $65,900. Other regions and products showed stable or even slightly increased revenue, no significant changes in traffic, conversion rates, or prices were observed across the board."
+}

@@ -1,0 +1,51 @@
+{
+    "scenario_id": "case_005",
+    "should_abstain": true,
+    "dominant_cause": null,
+    "affected_region": null,
+    "affected_product": null,
+    "estimated_impact": null,
+    "explanation": "No hypothesis dominates. Top candidate explains only 27.42% of modeled candidate impact. 1.  **Meaningful executable evidence:** All four hypotheses present meaningful, executable evidence, each accounting for a significant share (between 22.9% and 27.4%) of the total identified potential impact.\n2.  **Comparable explanations:** Yes, multiple explanations are highly comparable. The top two (price drop in North/Clothing, traffic drop in South/Electronics) are very close, as are the next two (conversion rate drops in North/Electronics and South/Clothing).\n3.  **Dominating explanation:** No, no single explanation clearly dominates.\n4.  **Caution/Abstain:** The system should be cautious. The sum of individual \"impacts\" (over 18,800) vastly exceeds the overall revenue decline (669.38). This suggests complex interactions, and these are likely gross impacts rather than direct net contributions, warranting further investigation.",
+    "evidence_candidates": [
+        {
+            "cause": "price_drop",
+            "region": "North",
+            "product": "Clothing",
+            "impact": 5166.0,
+            "mechanism_change_pct": 10.0,
+            "segment_revenue_before": 2920.0,
+            "segment_revenue_after": 2734.9411764705883,
+            "impact_share": 0.27420283590364253
+        },
+        {
+            "cause": "traffic_drop",
+            "region": "South",
+            "product": "Electronics",
+            "impact": 5041.271140698609,
+            "mechanism_change_pct": 6.099191154813419,
+            "segment_revenue_before": 4822.222222222223,
+            "segment_revenue_after": 4635.294117647059,
+            "impact_share": 0.2675824319277486
+        },
+        {
+            "cause": "conversion_rate_drop",
+            "region": "North",
+            "product": "Electronics",
+            "impact": 4316.836762342844,
+            "mechanism_change_pct": 4.807927328110726,
+            "segment_revenue_before": 4997.777777777777,
+            "segment_revenue_after": 4947.058823529412,
+            "impact_share": 0.22913063925038835
+        },
+        {
+            "cause": "conversion_rate_drop",
+            "region": "South",
+            "product": "Clothing",
+            "impact": 4315.959826292249,
+            "mechanism_change_pct": 8.516111303706012,
+            "segment_revenue_before": 2946.6666666666665,
+            "segment_revenue_after": 2700.0,
+            "impact_share": 0.2290840929182205
+        }
+    ]
+}

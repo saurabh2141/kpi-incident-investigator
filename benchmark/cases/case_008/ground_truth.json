@@ -1,0 +1,28 @@
+{
+    "scenario_id": "case_008",
+    "scenario_type": "dominant_cause_with_red_herrings",
+    "user_question": "Why did overall revenue drop after 2026-08-15?",
+    "target_kpi": "revenue",
+    "direction": "decrease",
+    "dominant_cause": "conversion_rate_drop",
+    "affected_region": "South",
+    "affected_product": "Electronics",
+    "incident_start": "2026-08-15",
+    "should_abstain": false,
+    "expected_impact": 47900.0,
+    "red_herrings": [
+        {
+            "type": "inventory_drop_without_stockout",
+            "region": "North",
+            "product": "Clothing",
+            "reason_not_causal": "Inventory remains above orders and therefore does not constrain sales."
+        },
+        {
+            "type": "marketing_spend_drop",
+            "region": "North",
+            "product": "Electronics",
+            "reason_not_causal": "Marketing spend is not connected to visitor generation in this benchmark."
+        }
+    ],
+    "random_seed": 336
+}

@@ -1,0 +1,26 @@
+{
+    "scenario_id": "case_002",
+    "scenario_type": "dominant_cause_with_red_herrings",
+    "user_question": "Why did overall revenue drop after 2026-08-15?",
+    "target_kpi": "revenue",
+    "direction": "decrease",
+    "dominant_cause": "inventory_shortage",
+    "affected_region": "South",
+    "affected_product": "Electronics",
+    "incident_start": "2026-08-15",
+    "should_abstain": false,
+    "expected_impact": 77600.0,
+    "red_herrings": [
+        {
+            "type": "marketing_spend_drop",
+            "region": "North",
+            "product": "Clothing"
+        },
+        {
+            "type": "returns_spike",
+            "region": "All",
+            "product": "Clothing"
+        }
+    ],
+    "random_seed": 84
+}

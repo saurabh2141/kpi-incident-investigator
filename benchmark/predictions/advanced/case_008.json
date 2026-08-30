@@ -1,0 +1,41 @@
+{
+    "scenario_id": "case_008",
+    "should_abstain": false,
+    "dominant_cause": "conversion_rate_drop",
+    "affected_region": "South",
+    "affected_product": "Electronics",
+    "estimated_impact": 47914.742769482815,
+    "explanation": "Top hypothesis explains 87.56% of modeled candidate impact. Here's a review of the evidence:\n\n1.  **Which hypotheses have meaningful executable evidence?**\n    Hypotheses 1 (`conversion_rate_drop` in South, Electronics) and 2 (`traffic_drop` in North, Electronics) provide meaningful, executable evidence. Hypothesis 1 shows a significant segment revenue drop (2924.97) and a 57.01% mechanism change. Hypothesis 2 shows a moderate segment decline (242.09). Hypothesis 3 is less meaningful for the overall decline as its segment revenue *increased* (by 80.86) despite a 'drop' cause.\n\n2.  **Are multiple explanations comparable?**\n    Explanations are comparable in format. However, their consistency with contributing to the *overall decline* and their magnitudes vary greatly, particularly with Hypothesis 3 showing an anomalous segment revenue increase.\n\n3.  **Does one explanation clearly dominate?**\n    Yes, Hypothesis 1 (`conversion_rate_drop` in South, Electronics) clearly dominates. Its segment's revenue decline (2924.97) alone *exceeds* the overall KPI decline (2691.45), identifying it as the primary driver. It also represents 87.5% of the total identified impact.\n\n4.  **Should the system be cautious or abstain?**\n    Caution is advised regarding Hypothesis 3 due to the segment's revenue increase despite the identified `conversion_rate_drop`. However, the clear dominance and consistent evidence from Hypothesis 1 allow for a confident conclusion on the primary cause. The absolute 'impact' values are very large and may require re-evaluation.",
+    "evidence_candidates": [
+        {
+            "cause": "conversion_rate_drop",
+            "region": "South",
+            "product": "Electronics",
+            "impact": 47914.742769482815,
+            "mechanism_change_pct": 57.014290467316556,
+            "segment_revenue_before": 4995.555555555556,
+            "segment_revenue_after": 2070.5882352941176,
+            "impact_share": 0.875637387857753
+        },
+        {
+            "cause": "traffic_drop",
+            "region": "North",
+            "product": "Electronics",
+            "impact": 5054.72273114265,
+            "mechanism_change_pct": 5.842328151629402,
+            "segment_revenue_before": 5024.444444444444,
+            "segment_revenue_after": 4782.35294117647,
+            "impact_share": 0.09237457936353506
+        },
+        {
+            "cause": "conversion_rate_drop",
+            "region": "North",
+            "product": "Clothing",
+            "impact": 1750.3802185097543,
+            "mechanism_change_pct": 3.408692449330501,
+            "segment_revenue_before": 2802.6666666666665,
+            "segment_revenue_after": 2883.529411764706,
+            "impact_share": 0.03198803277871188
+        }
+    ]
+}

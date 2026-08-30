@@ -1,0 +1,9 @@
+{
+    "scenario_id": "case_006",
+    "should_abstain": false,
+    "dominant_cause": "traffic_drop",
+    "affected_region": "South",
+    "affected_product": "Clothing",
+    "estimated_impact": 1366.63,
+    "explanation": "Overall daily revenue dropped from an average of $12975.22 before 2026-08-15 to $9781.25 after, a decrease of $3193.97. The most significant contributor to this decline is the 'South Clothing' segment. Its average daily revenue dropped by $1366.63 (a -46.20% decrease), accounting for over 42% of the total revenue decline. This substantial drop is primarily due to a massive -52.75% decrease in average daily visitors for 'South Clothing', falling from 897.83 to 424.38. Price remained constant and inventory levels were sufficient, ruling out 'price_drop' and 'inventory_shortage'. While 'North Electronics' also saw a revenue drop (-11.97%) due to a conversion rate decline, its absolute impact was less than half of 'South Clothing's."
+}

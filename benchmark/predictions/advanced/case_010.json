@@ -1,0 +1,52 @@
+{
+    "scenario_id": "case_010",
+    "should_abstain": true,
+    "dominant_cause": null,
+    "affected_region": null,
+    "affected_product": null,
+    "estimated_impact": null,
+    "explanation": "No hypothesis dominates. Top candidate explains only 48.59% of modeled candidate impact. Here's an analysis of the provided explanations:\n\n1.  **Which hypotheses have meaningful executable evidence?**\n    All hypotheses offer specific causes (inventory shortage, conversion rate drop, traffic drop) in defined segments, supported by quantifiable metrics like `constrained_rows`, `mechanism_change_pct`, and `impact_share`.\n\n2.  **Are multiple explanations comparable?**\n    Yes, the `inventory_shortage` in South/Electronics (48.6% impact share) and the `conversion_rate_drop` in North/Clothing (40.9% impact share) are highly comparable and significant contributors.\n\n3.  **Does one explanation clearly dominate?**\n    No. The top two explanations are very close in their respective `impact_share` and jointly account for the vast majority of the overall revenue decline, indicating a multi-factor issue.\n\n4.  **Should the system be cautious or abstain?**\n    The system should be cautious. While `impact_share` values provide a clear ranking, the absolute `impact` values are several orders of magnitude higher than the total observed revenue decline, suggesting a potential miscalculation or misinterpretation of the `impact` field.",
+    "evidence_candidates": [
+        {
+            "cause": "inventory_shortage",
+            "region": "South",
+            "product": "Electronics",
+            "impact": 39400.0,
+            "constrained_rows": 17,
+            "mechanism_change_pct": null,
+            "segment_revenue_before": 4937.777777777777,
+            "segment_revenue_after": 2882.3529411764707,
+            "impact_share": 0.48586132061750653
+        },
+        {
+            "cause": "conversion_rate_drop",
+            "region": "North",
+            "product": "Clothing",
+            "impact": 33195.21634775946,
+            "mechanism_change_pct": 68.88940878039173,
+            "segment_revenue_before": 2834.6666666666665,
+            "segment_revenue_after": 847.0588235294117,
+            "impact_share": 0.40934699626665616
+        },
+        {
+            "cause": "conversion_rate_drop",
+            "region": "North",
+            "product": "Electronics",
+            "impact": 5741.231845562299,
+            "mechanism_change_pct": 6.776425436081122,
+            "segment_revenue_before": 5100.0,
+            "segment_revenue_after": 4594.117647058823,
+            "impact_share": 0.07079803265117215
+        },
+        {
+            "cause": "traffic_drop",
+            "region": "North",
+            "product": "Electronics",
+            "impact": 2756.6504503909864,
+            "mechanism_change_pct": 3.151168764449012,
+            "segment_revenue_before": 5100.0,
+            "segment_revenue_after": 4594.117647058823,
+            "impact_share": 0.033993650464665195
+        }
+    ]
+}

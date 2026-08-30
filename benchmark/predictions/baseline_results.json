@@ -1,0 +1,117 @@
+{
+    "cases_evaluated": 12,
+    "correct_decisions": 8,
+    "incorrect_decisions": 4,
+    "decision_accuracy_pct": 66.66666666666666,
+    "correct_abstentions": 2,
+    "results": [
+        {
+            "scenario_id": "case_001",
+            "decision_correct": true,
+            "abstention_correct": false,
+            "cause_correct": true,
+            "region_correct": true,
+            "product_correct": true,
+            "impact_error_pct": 4.354136429608127
+        },
+        {
+            "scenario_id": "case_002",
+            "decision_correct": true,
+            "abstention_correct": false,
+            "cause_correct": true,
+            "region_correct": true,
+            "product_correct": true,
+            "impact_error_pct": 95.16577319587628
+        },
+        {
+            "scenario_id": "case_003",
+            "decision_correct": true,
+            "abstention_correct": false,
+            "cause_correct": true,
+            "region_correct": true,
+            "product_correct": true,
+            "impact_error_pct": 94.81715210355986
+        },
+        {
+            "scenario_id": "case_004",
+            "decision_correct": false,
+            "abstention_correct": false,
+            "cause_correct": null,
+            "region_correct": null,
+            "product_correct": null,
+            "impact_error_pct": null
+        },
+        {
+            "scenario_id": "case_005",
+            "decision_correct": false,
+            "abstention_correct": false,
+            "cause_correct": null,
+            "region_correct": null,
+            "product_correct": null,
+            "impact_error_pct": null
+        },
+        {
+            "scenario_id": "case_006",
+            "decision_correct": true,
+            "abstention_correct": false,
+            "cause_correct": true,
+            "region_correct": true,
+            "product_correct": true,
+            "impact_error_pct": 94.24819023569023
+        },
+        {
+            "scenario_id": "case_007",
+            "decision_correct": true,
+            "abstention_correct": false,
+            "cause_correct": true,
+            "region_correct": true,
+            "product_correct": true,
+            "impact_error_pct": 10.265282583621683
+        },
+        {
+            "scenario_id": "case_008",
+            "decision_correct": true,
+            "abstention_correct": false,
+            "cause_correct": true,
+            "region_correct": true,
+            "product_correct": true,
+            "impact_error_pct": 94.34446764091858
+        },
+        {
+            "scenario_id": "case_009",
+            "decision_correct": false,
+            "abstention_correct": false,
+            "cause_correct": null,
+            "region_correct": null,
+            "product_correct": null,
+            "impact_error_pct": null
+        },
+        {
+            "scenario_id": "case_010",
+            "decision_correct": true,
+            "abstention_correct": true,
+            "cause_correct": null,
+            "region_correct": null,
+            "product_correct": null,
+            "impact_error_pct": null
+        },
+        {
+            "scenario_id": "case_011",
+            "decision_correct": true,
+            "abstention_correct": true,
+            "cause_correct": null,
+            "region_correct": null,
+            "product_correct": null,
+            "impact_error_pct": null
+        },
+        {
+            "scenario_id": "case_012",
+            "decision_correct": false,
+            "abstention_correct": false,
+            "cause_correct": null,
+            "region_correct": null,
+            "product_correct": null,
+            "impact_error_pct": null
+        }
+    ]
+}

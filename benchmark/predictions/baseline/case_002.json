@@ -1,0 +1,9 @@
+{
+    "scenario_id": "case_002",
+    "should_abstain": false,
+    "dominant_cause": "inventory_shortage",
+    "affected_region": "South",
+    "affected_product": "Electronics",
+    "estimated_impact": 3751.36,
+    "explanation": "Overall revenue dropped primarily due to a severe inventory shortage for 'Electronics' products in the 'South' region. After 2026-08-15, the average daily revenue for South Electronics plummeted by 79.68% (3751.36 daily), accounting for the entirety of the overall revenue decline. During this period, units sold for South Electronics consistently matched the extremely low available inventory, despite stable visitor numbers, conversion rates, and a significantly higher volume of orders, indicating unfulfilled demand due to stock limitations. Other segments experienced minor fluctuations or slight revenue increases."
+}

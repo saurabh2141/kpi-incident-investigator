@@ -1,0 +1,21 @@
+{
+    "scenario_id": "case_012",
+    "scenario_type": "noise_only_with_red_herring",
+    "user_question": "Why did overall revenue drop after 2026-08-15?",
+    "target_kpi": "revenue",
+    "direction": "decrease",
+    "dominant_cause": null,
+    "should_abstain": true,
+    "expected_behavior": "Recognize that the available evidence does not support a dominant root cause. Do not attribute the revenue movement to marketing merely because marketing changed during the same period.",
+    "red_herrings": [
+        {
+            "type": "marketing_spend_drop",
+            "region": "North",
+            "product": "Electronics",
+            "reason_not_causal": "Marketing spend is not connected to visitor generation in the synthetic data-generating process."
+        }
+    ],
+    "total_expected_impact": 0.0,
+    "incident_start": "2026-08-15",
+    "random_seed": 500
+}

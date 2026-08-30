@@ -1,0 +1,29 @@
+{
+    "scenario_id": "case_009",
+    "scenario_type": "multiple_contributing_causes",
+    "user_question": "Why did overall revenue drop after 2026-08-15?",
+    "target_kpi": "revenue",
+    "direction": "decrease",
+    "dominant_cause": null,
+    "should_abstain": true,
+    "expected_behavior": "Report multiple material contributors and abstain from declaring one dominant root cause.",
+    "contributors": [
+        {
+            "cause": "traffic_drop",
+            "region": "North",
+            "product": "Electronics",
+            "expected_impact": 25800.0,
+            "impact_share": 0.5381727158948686
+        },
+        {
+            "cause": "price_drop",
+            "region": "South",
+            "product": "Clothing",
+            "expected_impact": 22140.0,
+            "impact_share": 0.4618272841051314
+        }
+    ],
+    "total_expected_impact": 47940.0,
+    "incident_start": "2026-08-15",
+    "random_seed": 378
+}

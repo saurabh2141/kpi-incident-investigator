@@ -1,0 +1,9 @@
+{
+    "scenario_id": "case_012",
+    "should_abstain": false,
+    "dominant_cause": "conversion_rate_drop",
+    "affected_region": "North",
+    "affected_product": "Electronics",
+    "estimated_impact": 182.23,
+    "explanation": "Overall daily average revenue decreased from approximately 15218.48 (before 2026-08-15) to 15036.25 (after 2026-08-15), a drop of 182.23. This decline is predominantly driven by the 'North, Electronics' segment. After 2026-08-15, marketing spend for 'North, Electronics' was drastically cut by about 70%. This reduction led to a ~7% drop in its conversion rate and a smaller ~1.76% drop in visitors. The conversion rate decline had a more significant impact on the segment's units sold and revenue. While other segments collectively saw a slight increase in revenue, the substantial revenue drop in 'North, Electronics' (an average of 299.73 daily) fully explains the overall revenue decline."
+}

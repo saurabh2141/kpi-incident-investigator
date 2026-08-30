@@ -1,0 +1,21 @@
+{
+    "scenario_id": "case_006",
+    "should_abstain": false,
+    "dominant_cause": "traffic_drop",
+    "affected_region": "South",
+    "affected_product": "Clothing",
+    "estimated_impact": 25991.249652810297,
+    "explanation": "Top hypothesis explains 100.00% of modeled candidate impact. Here's an analysis of the provided evidence:\n\n1.  **Which hypotheses have meaningful executable evidence?**\n    The hypothesis \"traffic_drop in South, Clothing\" has meaningful evidence. The mechanism change (52.02% drop) is significant, and the segment's revenue decline from 2906.67 to 1365.88 (-1540.78) directly supports the overall revenue change. The `impact_share` of 1.0 indicates it's a primary driver.\n\n2.  **Are multiple explanations comparable?**\n    No, only one candidate explanation is provided.\n\n3.  **Does one explanation clearly dominate?**\n    Yes, this single explanation clearly dominates. Its calculated segment impact (-1540.78) accounts for approximately 95% of the total overall revenue decline (-1622.91), and the `impact_share` is 1.0.\n\n4.  **Should the system be cautious or abstain?**\n    The system should **not** be overly cautious. The evidence strongly points to \"traffic_drop in South, Clothing\" as the primary cause of the overall revenue decline.",
+    "evidence_candidates": [
+        {
+            "cause": "traffic_drop",
+            "region": "South",
+            "product": "Clothing",
+            "impact": 25991.249652810297,
+            "mechanism_change_pct": 52.01797568926606,
+            "segment_revenue_before": 2906.6666666666665,
+            "segment_revenue_after": 1365.8823529411766,
+            "impact_share": 1.0
+        }
+    ]
+}

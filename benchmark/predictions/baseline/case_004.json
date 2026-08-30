@@ -1,0 +1,9 @@
+{
+    "scenario_id": "case_004",
+    "should_abstain": false,
+    "dominant_cause": "inventory_shortage",
+    "affected_region": "South",
+    "affected_product": "Clothing",
+    "estimated_impact": 26187.52,
+    "explanation": "Overall revenue dropped after 2026-08-15, with average daily revenue decreasing from $13,503.91 to $10,402.50. The primary driver of this decline is an inventory shortage for 'Clothing' in the 'South' region. Before 2026-08-15, daily average revenue for South Clothing was $3,009.22, dropping to $1,372.50 after the date, a loss of $1,636.72 per day. Over the 16 days following August 15th, this accounts for an estimated total revenue loss of $26,187.52. Analysis shows that for South Clothing, units sold consistently matched the critically low inventory levels, even when the number of orders placed was higher, indicating unmet demand due to stock limitations. A significant conversion rate drop for North Electronics also contributed substantially, but the inventory shortage for South Clothing had a slightly larger absolute revenue impact."
+}

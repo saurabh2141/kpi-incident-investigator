@@ -1,0 +1,9 @@
+{
+    "scenario_id": "case_003",
+    "should_abstain": false,
+    "dominant_cause": "conversion_rate_drop",
+    "affected_region": "North",
+    "affected_product": "Electronics",
+    "estimated_impact": 3203,
+    "explanation": "Overall revenue dropped after 2026-08-15 primarily due to a significant and sustained decrease in conversion rate for Electronics products in the North region. The conversion rate for 'North, Electronics' consistently fell from an average of 4-6% before Aug 15th to 1-2% afterward. Visitors and pricing for this segment remained stable, and inventory was sufficient. Other regions and products did not experience a similar significant decline in performance, indicating a localized issue with Electronics conversion in the North region. The estimated impact of this conversion rate drop on North Electronics' daily revenue is approximately $3203 (from ~ $4786 to ~ $1583), which explains the overall daily revenue decline."
+}

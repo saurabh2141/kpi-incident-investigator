@@ -1,0 +1,9 @@
+{
+    "scenario_id": "case_008",
+    "should_abstain": false,
+    "dominant_cause": "conversion_rate_drop",
+    "affected_region": "South",
+    "affected_product": "Electronics",
+    "estimated_impact": 2709,
+    "explanation": "Overall revenue dropped from an average of $15307 per day (before 2026-08-16) to $13213 per day (after 2026-08-15), a daily drop of approximately $2094. The primary driver for this decline is a significant and sustained drop in the conversion rate for the 'Electronics' product in the 'South' region. Before 2026-08-16, the average conversion rate for South Electronics was approximately 0.0487, leading to an average daily revenue of $4872. After this date, the average conversion rate plummeted to about 0.0216, while visitor numbers remained stable, resulting in an average daily revenue of $2163 for this segment. This constitutes a daily revenue drop of approximately $2709 from the South Electronics segment alone, which fully accounts for and even exceeds the overall revenue decline, indicating it is the dominant cause. No significant drops were observed in traffic (visitors) or product prices. Although 'North, Clothing' experienced an inventory level drop, its units sold and conversion rates remained stable, indicating inventory was not a direct cause of a revenue drop."
+}

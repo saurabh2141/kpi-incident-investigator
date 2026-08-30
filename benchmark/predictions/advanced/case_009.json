@@ -1,0 +1,41 @@
+{
+    "scenario_id": "case_009",
+    "should_abstain": true,
+    "dominant_cause": null,
+    "affected_region": null,
+    "affected_product": null,
+    "estimated_impact": null,
+    "explanation": "No hypothesis dominates. Top candidate explains only 45.62% of modeled candidate impact. 1.  **Meaningful executable evidence:** All three hypotheses present clear causes, specific segments (region and product), and a quantifiable `mechanism_change_pct`, making them meaningful and actionable.\n\n2.  **Comparable explanations:** Yes, the first two explanations are highly comparable. \"Traffic drop\" in North Electronics accounts for 45.6% of the explained decline, while \"Price drop\" in South Clothing accounts for 44.8%.\n\n3.  **Dominating explanation:** No, neither of the top two explanations clearly dominates. They contribute almost equally to the overall decline. The third explanation is a minor contributor at 9.5%.\n\n4.  **Caution or abstain:** The system should be cautious and highlight both primary explanations as significant drivers, rather than picking a single dominant cause. It should not abstain, as strong, actionable evidence is present.",
+    "evidence_candidates": [
+        {
+            "cause": "traffic_drop",
+            "region": "North",
+            "product": "Electronics",
+            "impact": 22527.975805009773,
+            "mechanism_change_pct": 26.035411198684972,
+            "segment_revenue_before": 5040.0,
+            "segment_revenue_after": 3847.0588235294117,
+            "impact_share": 0.45618701004707213
+        },
+        {
+            "cause": "price_drop",
+            "region": "South",
+            "product": "Clothing",
+            "impact": 22140.0,
+            "mechanism_change_pct": 45.0,
+            "segment_revenue_before": 2880.0,
+            "segment_revenue_after": 1591.764705882353,
+            "impact_share": 0.44833057749450095
+        },
+        {
+            "cause": "traffic_drop",
+            "region": "South",
+            "product": "Electronics",
+            "impact": 4715.227374504696,
+            "mechanism_change_pct": 5.497697017106972,
+            "segment_revenue_before": 5004.444444444444,
+            "segment_revenue_after": 4835.294117647059,
+            "impact_share": 0.09548241245842683
+        }
+    ]
+}

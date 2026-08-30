@@ -1,0 +1,22 @@
+{
+    "scenario_id": "case_001",
+    "should_abstain": false,
+    "dominant_cause": "inventory_shortage",
+    "affected_region": "South",
+    "affected_product": "Electronics",
+    "estimated_impact": 68900.0,
+    "explanation": "Top hypothesis explains 100.00% of modeled candidate impact. 1.  **Meaningful executable evidence:** There is only one hypothesis. It identifies a specific cause (\"inventory_shortage\"), region (\"South\"), and product (\"Electronics\") with corresponding segment revenue changes.\n2.  **Multiple explanations comparable:** No, only one candidate explanation is provided.\n3.  **One explanation clearly dominate:** No. While it's the only candidate, its reported `impact` (68900.0) is vastly larger than the overall revenue decline (4015.35). This magnitude mismatch, despite an `impact_share` of 1.0, means it fundamentally misrepresents the observed KPI change.\n4.  **System caution/abstention:** The system should be highly cautious and effectively abstain. The calculated `impact` is inconsistent with the overall decline, indicating a significant error in the evidence's magnitude.",
+    "evidence_candidates": [
+        {
+            "cause": "inventory_shortage",
+            "region": "South",
+            "product": "Electronics",
+            "impact": 68900.0,
+            "constrained_rows": 17,
+            "mechanism_change_pct": null,
+            "segment_revenue_before": 5040.0,
+            "segment_revenue_after": 947.0588235294117,
+            "impact_share": 1.0
+        }
+    ]
+}

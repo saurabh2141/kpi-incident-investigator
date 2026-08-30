@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables / secrets
+.env
+.env.*
+*.env
+
+# API keys / credentials
+credentials.json
+service_account.json
+*.pem
+*.key
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Python cache / test artifacts
+.pytest_cache/
+.mypy_cache/
+
+# Local notebook artifacts
+.ipynb_checkpoints/

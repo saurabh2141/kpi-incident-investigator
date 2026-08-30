@@ -1,0 +1,9 @@
+{
+    "scenario_id": "case_005",
+    "should_abstain": false,
+    "dominant_cause": "conversion_rate_drop",
+    "affected_region": "South",
+    "affected_product": "Clothing",
+    "estimated_impact": 609.48,
+    "explanation": "Overall average daily revenue dropped by $694.77 after 2026-08-15 (comparing Aug 16-31 to Jul 1-Aug 15). The primary cause is a significant decline in conversion rates across multiple categories. The largest individual impact came from South, Clothing, with its conversion rate dropping from an average of 0.052 to 0.047, contributing an estimated $338.83 to the daily revenue loss. North, Electronics also experienced a conversion rate drop (from 0.051 to 0.048), leading to a $270.65 daily revenue decline. The combined daily revenue loss attributed to conversion rate drops is $609.48, making it the dominant cause. A price drop for North, Clothing contributed a smaller $131.92 to the daily revenue decline."
+}

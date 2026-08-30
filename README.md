@@ -543,7 +543,7 @@ streamlit
 Clone the repository and enter the project directory.
 
 ```powershell
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/saurabh2141/kpi-incident-investigator.git
 cd kpi-incident-investigator
 ```
 

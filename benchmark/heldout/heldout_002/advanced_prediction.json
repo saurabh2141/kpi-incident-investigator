@@ -1,0 +1,21 @@
+{
+    "scenario_id": "heldout_002",
+    "should_abstain": false,
+    "dominant_cause": "traffic_drop",
+    "affected_region": "South",
+    "affected_product": "Electronics",
+    "estimated_impact": 32917.239806360136,
+    "explanation": "Top hypothesis explains 100.00% of modeled candidate impact. 1.  **Which hypotheses have meaningful executable evidence?**\n    The single hypothesis of a `traffic_drop` in the `South` region for `Electronics` has strong, meaningful executable evidence. The mechanism experienced a significant 39.71% drop, leading to a substantial segment revenue decline from 4826.67 to 2823.53.\n\n2.  **Are multiple explanations comparable?**\n    No, only one candidate explanation was provided.\n\n3.  **Does one explanation clearly dominate?**\n    Yes, this single explanation clearly dominates. It is the only candidate provided and has an `impact_share` of 1.0, indicating it accounts for 100% of the identified impact. The daily revenue drop in this segment (2003.14) is also larger than the overall daily revenue decline (1584.50), strongly suggesting it fully explains the incident.\n\n4.  **Should the system be cautious or abstain?**\n    No, the system should not be cautious or abstain. The evidence for this sole explanation is robust and sufficiently explains the observed overall revenue decline.",
+    "evidence_candidates": [
+        {
+            "cause": "traffic_drop",
+            "region": "South",
+            "product": "Electronics",
+            "impact": 32917.239806360136,
+            "mechanism_change_pct": 39.705982114710075,
+            "segment_revenue_before": 4826.666666666667,
+            "segment_revenue_after": 2823.529411764706,
+            "impact_share": 1.0
+        }
+    ]
+}

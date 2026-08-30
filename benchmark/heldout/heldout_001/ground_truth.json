@@ -1,0 +1,11 @@
+{
+    "scenario_id": "heldout_001",
+    "scenario_type": "heldout_validation",
+    "target_kpi": "revenue",
+    "direction": "decrease",
+    "dominant_cause": "price_drop",
+    "affected_region": "North",
+    "affected_product": "Clothing",
+    "should_abstain": false,
+    "expected_impact": 9420.0
+}

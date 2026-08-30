@@ -280,6 +280,63 @@ They are **not** a claim that the system has general 100% root-cause-analysis ac
 
 ---
 
+## Runtime and Cost
+
+Runtime is dependent on Gemini API response latency and availability.
+
+A representative benchmark run measured:
+
+```text
+Advanced workflow:
+12/12 cases completed
+Total runtime: ~148 seconds
+Average runtime: ~10.3 seconds per case
+```
+
+The baseline showed substantially higher and more variable latency during
+measurement, with 9/12 cases completing successfully in one run. The three
+remaining cases encountered external API/network availability errors.
+
+Because API latency and availability vary between runs, these measurements
+should be treated as approximate rather than fixed performance guarantees.
+
+Estimated Gemini API cost:
+
+```text
+Approximately $0.04 for one 12-case run of both
+the baseline and advanced workflows.
+```
+
+This is an approximate estimate based on Gemini 2.5 Flash token pricing and
+the project's typical prompt/output sizes. Actual cost may vary with token
+usage and current API pricing.
+
+---
+
+## Held-Out Validation
+
+After the development benchmark was completed, the verification rules were
+frozen and two additional synthetic cases were generated with new random
+seeds.
+
+The advanced workflow correctly identified both injected mechanisms:
+
+```text
+heldout_001 → price_drop → North / Clothing
+heldout_002 → traffic_drop → South / Electronics
+```
+
+Result:
+
+```text
+2 / 2 correctly identified
+```
+
+These cases are reported separately from the 12-case development benchmark and
+were not used to tune the final verification thresholds.
+
+---
+
 ## Key Baseline Failures
 
 The baseline failed four scenarios.
@@ -508,6 +565,11 @@ kpi-incident-investigator/
 |   |   |-- ...
 |   |   `-- case_012/
 |   |
+|   |-- create_heldout.py
+|   |-- heldout/
+|   |   |-- heldout_001/
+|   |   `-- heldout_002/
+|   |
 |   |-- predictions/
 |   |   |-- baseline/
 |   |   `-- advanced/
@@ -517,8 +579,21 @@ kpi-incident-investigator/
 |   |-- evaluate_advanced.py
 |   `-- generate_benchmark.py
 |
+|-- trajectories/
+|   |-- README.md
+|   |-- case_001_advanced_trace.txt
+|   |-- case_001_prediction.json
+|   |-- case_004_advanced_trace.txt
+|   |-- case_004_baseline_prediction.json
+|   |-- case_004_baseline_trace.txt
+|   |-- case_004_prediction.json
+|   |-- case_012_advanced_trace.txt
+|   `-- case_012_prediction.json
+|
+|-- app.py
 |-- BENCHMARK_SPEC.md
 |-- CHANGELOG.md
+|-- requirements.txt
 `-- README.md
 ```
 

@@ -1,0 +1,41 @@
+{
+    "scenario_id": "heldout_001",
+    "should_abstain": false,
+    "dominant_cause": "price_drop",
+    "affected_region": "North",
+    "affected_product": "Clothing",
+    "estimated_impact": 9420.0,
+    "explanation": "Top hypothesis explains 72.65% of modeled candidate impact. 1.  **Meaningful executable evidence:** All three hypotheses (price drop, conversion rate drop, traffic drop) provide meaningful executable evidence, specifying causes, regions, products, and quantified mechanism changes.\n2.  **Comparable explanations:** Yes, all three are comparable explanations for revenue decline, offering distinct causes and estimated impacts.\n3.  **Dominance:** The \"price_drop\" in \"North, Clothing\" clearly dominates, accounting for 72.6% of the estimated impact with a substantial 20% mechanism change. The other two explanations are significantly smaller contributors (15.5% and 11.9%).\n4.  **Cautious/Abstain:** No, the system should not abstain. The evidence strongly points to the price drop as the primary driver of the revenue decline due to its clear dominance in impact share and mechanism change.",
+    "evidence_candidates": [
+        {
+            "cause": "price_drop",
+            "region": "North",
+            "product": "Clothing",
+            "impact": 9420.0,
+            "mechanism_change_pct": 20.0,
+            "segment_revenue_before": 2957.3333333333335,
+            "segment_revenue_after": 2216.470588235294,
+            "impact_share": 0.726458147394344
+        },
+        {
+            "cause": "conversion_rate_drop",
+            "region": "North",
+            "product": "Clothing",
+            "impact": 2004.945964789864,
+            "mechanism_change_pct": 4.050053197748219,
+            "segment_revenue_before": 2957.3333333333335,
+            "segment_revenue_after": 2216.470588235294,
+            "impact_share": 0.15461882496889706
+        },
+        {
+            "cause": "traffic_drop",
+            "region": "South",
+            "product": "Clothing",
+            "impact": 1542.0777154972975,
+            "mechanism_change_pct": 3.000426285799211,
+            "segment_revenue_before": 2996.0,
+            "segment_revenue_after": 2880.0,
+            "impact_share": 0.11892302763675891
+        }
+    ]
+}

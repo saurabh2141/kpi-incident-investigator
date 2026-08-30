@@ -131,6 +131,65 @@ competing-evidence comparison, and deterministic verification rather than
 relying on a one-shot LLM explanation.
 
 
+## Held-Out Validation
+
+After the 12-case development benchmark and verifier thresholds were frozen,
+two additional synthetic cases were generated with new random seeds.
+
+These cases were not used to tune the verification rules.
+
+### heldout_001
+
+```text
+Injected cause: price_drop
+Segment: North / Clothing
+Result: Correct
+```
+
+The workflow ranked the price-drop hypothesis first and correctly identified
+the injected cause despite additional competing signals.
+
+### heldout_002
+
+```text
+Injected cause: traffic_drop
+Segment: South / Electronics
+Result: Correct
+```
+
+The workflow identified the injected traffic-drop mechanism and correctly
+reported the affected segment.
+
+Held-out validation result:
+
+```text
+2 / 2 correctly identified
+```
+
+This validation is reported separately from the 12-case development benchmark.
+It is intended as a small generalization sanity check rather than a second
+benchmark.
+
+
+## Runtime Measurement
+
+Runtime instrumentation was added to the baseline and advanced benchmark
+runners without changing the investigation logic.
+
+Observed measurement:
+
+```text
+Advanced: ~148 seconds for 12 cases
+Advanced average: ~10.3 seconds per case
+```
+
+The baseline measurement was affected by external API and network availability
+errors, so its timing is reported qualitatively rather than as a directly
+comparable benchmark.
+
+Runtime is API-dependent and may vary between runs.
+
+
 ## Removed / Rejected Approach
 
 A raw metric change alone was rejected as evidence of root cause.

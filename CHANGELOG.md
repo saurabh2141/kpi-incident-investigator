@@ -50,6 +50,87 @@ Previously failed cases corrected:
 - case_012
 
 
+## Iteration Log
+
+### Iteration 1 — One-Shot Baseline
+
+The initial baseline used a single Gemini call to diagnose the KPI incident.
+
+Result:
+
+- 8 / 12 correct
+- Decision Accuracy: 66.67%
+
+Observed failures:
+
+- case_004: selected one cause despite two comparable contributors
+- case_005: selected a cause when no dominant contributor existed
+- case_009: selected one cause despite two comparable contributors
+- case_012: treated noisy variation as a meaningful conversion-rate decline
+
+Decision:
+
+The baseline showed that a plausible LLM explanation was not sufficient for
+ambiguous KPI incidents.
+
+### Iteration 2 — Mechanism-Specific Evidence
+
+Added executable tests for:
+
+- traffic
+- conversion rate
+- price
+- inventory
+
+The inventory test was made more specific: inventory movement is not treated
+as evidence unless demand actually exceeds available inventory.
+
+Decision:
+
+Use mechanism-level evidence instead of raw metric correlation.
+
+### Iteration 3 — Evidence Ranking and Comparison
+
+Added impact estimates and impact shares so competing explanations could be
+compared directly.
+
+This exposed cases such as case_004, where two explanations had nearly equal
+contributions.
+
+Decision:
+
+Do not promote the highest-ranked candidate automatically when competing
+evidence is comparable.
+
+### Iteration 4 — Deterministic Verification
+
+Added a deterministic verification layer after the Gemini evidence review.
+
+The LLM review is advisory; the verifier applies the dominance rules and can
+reject a diagnosis proposed by the model.
+
+Decision:
+
+Make the final output either a verified dominant cause or an explicit
+abstention.
+
+### Iteration 5 — Final Benchmark Validation
+
+Final result:
+
+```text
+Baseline:  8 / 12
+Advanced: 12 / 12
+Improvement: +33.33 percentage points
+```
+
+All 12 advanced benchmark cases were evaluated correctly.
+
+The main improvement came from combining executable mechanism tests,
+competing-evidence comparison, and deterministic verification rather than
+relying on a one-shot LLM explanation.
+
+
 ## Removed / Rejected Approach
 
 A raw metric change alone was rejected as evidence of root cause.

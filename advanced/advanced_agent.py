@@ -408,6 +408,14 @@ CANDIDATES:
 
 Your job is NOT to invent additional causes.
 
+IMPORTANT INTERPRETATION NOTE:
+Candidate "impact" values are estimated cumulative revenue impact across the
+full post-incident period. The overall revenue before/after values are average
+daily revenue. These quantities use different time scales and should NOT be
+directly compared as if they were the same unit. Do not flag a candidate merely
+because cumulative impact is larger than the average daily revenue decline.
+Focus on mechanism evidence, relative impact shares, and dominance.
+
 Briefly answer:
 
 1. Which hypotheses have meaningful executable evidence?

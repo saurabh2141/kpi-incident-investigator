@@ -533,6 +533,7 @@ Python 3.x
 pandas
 numpy
 google-genai
+streamlit
 ```
 
 ---
@@ -567,6 +568,40 @@ $env:GEMINI_API_KEY="YOUR_API_KEY"
 Do not commit the API key to the repository.
 
 ---
+
+## Launch the Demo UI
+
+The project includes a Streamlit interface for interactively exploring the benchmark incidents.
+
+Run:
+
+```powershell
+py -m streamlit run app.py
+```
+
+Then open the local URL shown in the terminal, usually:
+
+```text
+http://localhost:8501
+```
+
+The interface allows you to:
+
+- select any benchmark incident
+- inspect the KPI revenue movement
+- compare the one-shot baseline diagnosis
+- run the evidence-backed investigation live
+- inspect ranked evidence
+- read the Gemini evidence review
+- view the final verified diagnosis or abstention decision
+
+For a representative demo, use:
+
+```text
+case_004
+```
+
+In this scenario, the baseline selects a single inventory-shortage explanation, while the advanced workflow finds two comparable contributors and correctly abstains.
 
 ## Run a Single Baseline Investigation
 

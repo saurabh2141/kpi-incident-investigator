@@ -61,17 +61,17 @@ Decision Accuracy = Correct Decisions / Total Benchmark Cases
 
 ## 4. Secondary Metrics
 
-We may additionally measure:
+The current benchmark is scored primarily using Decision Accuracy.
 
-- False Attribution Rate
-- Correct Abstention Rate
-- Impact Estimation Error
-- Unsupported Claim Rate
-- Execution Success Rate
-- Investigation Latency
-- Approximate LLM Cost
+Additional diagnostic quantities recorded or considered during development include:
 
-The primary metric remains Decision Accuracy.
+- impact estimates
+- abstention behavior
+- evidence dominance
+- execution success
+- approximate investigation cost
+
+These are supporting diagnostics rather than the primary benchmark score.
 
 ---
 
@@ -123,14 +123,13 @@ Example:
 
 Revenue decreases because:
 
-- Conversion falls
-- Inventory availability falls
-- Returns increase
+- conversion rate falls in one segment
+- inventory constrains demand in another segment
+- traffic also declines
 
 Expected result:
 
-The system recognizes that several factors contributed and does not falsely
-attribute the entire change to one factor.
+The system recognizes that multiple mechanisms contributed and does not falsely attribute the entire change to one factor.
 
 ---
 
@@ -151,7 +150,7 @@ does not support a dominant explanation.
 
 ## 6. Benchmark Size
 
-Initial benchmark:
+Benchmark composition:
 
 - 3 Single Dominant Cause cases
 - 3 Red-Herring cases
@@ -162,59 +161,79 @@ Total:
 
 12 benchmark cases
 
-Every case will use a fixed random seed so the exact datasets can be reproduced.
+The benchmark uses fixed synthetic scenarios so the same datasets and ground truth can be reproduced.
 
 ---
 
-## 7. Initial Dataset Schema
+## 7. Dataset Schema
 
-Each synthetic dataset may contain:
+The synthetic benchmark uses structured KPI data with fields such as:
 
 - date
 - region
 - product
-- channel
 - visitors
+- conversion_rate
 - orders
 - units_sold
 - price
-- discount
 - inventory
-- returns
 - marketing_spend
+- returns
 - revenue
 
-We will avoid adding unnecessary columns.
+Some scenarios omit or vary non-essential fields depending on the mechanism being tested.
+
+Only fields relevant to the benchmark scenarios are included.
 
 ---
 
 ## 8. Ground Truth
 
-Every benchmark case must have structured ground truth.
+Every benchmark case contains structured ground truth stored in:
 
-Example:
+```text
+benchmark/cases/<case_id>/ground_truth.json
+```
 
+Ground-truth fields include:
+
+```text
+scenario_id
+scenario_type
+target_kpi
+direction
+dominant_cause
+affected_region
+affected_product
+should_abstain
+expected_impact
+```
+
+For example, a dominant-cause case may specify:
+
+```json
 {
-    "scenario_id": "case_001",
-    "scenario_type": "red_herring",
-    "target_kpi": "revenue",
-    "direction": "decrease",
-    "dominant_cause": "inventory_shortage",
-    "affected_region": "South",
-    "affected_product": "Electronics",
-    "should_abstain": false,
-    "expected_impact": 1250000
+  "scenario_id": "case_001",
+  "dominant_cause": "inventory_shortage",
+  "affected_region": "South",
+  "affected_product": "Electronics",
+  "should_abstain": false,
+  "expected_impact": 68900.0
 }
+```
 
-Example abstention case:
+For multi-causal or noise-oriented cases, the benchmark instead requires abstention:
 
+```json
 {
-    "scenario_id": "case_010",
-    "scenario_type": "no_dominant_cause",
-    "target_kpi": "revenue",
-    "dominant_cause": null,
-    "should_abstain": true
+  "scenario_id": "case_012",
+  "dominant_cause": null,
+  "should_abstain": true
 }
+```
+
+Ground truth is used only by the evaluator and is never passed to the investigating workflow.
 
 ---
 
@@ -223,54 +242,63 @@ Example abstention case:
 The baseline and advanced system must receive:
 
 - The same dataset
-- The same user question
+- The same investigation objective
 - The same benchmark cases
-- The same underlying LLM where possible
+- The same underlying LLM: Gemini 2.5 Flash
 - Equivalent access to the data
 
 The main difference should be the investigation architecture.
 
 ---
 
-## 10. Baseline Concept
+## 10. Baseline Workflow
 
-The baseline will eventually use:
+The implemented baseline uses:
 
+```text
 User Question
-→ Inspect Data
-→ Perform One Analysis Attempt
-→ Produce Final Explanation
+→ Inspect Dataset
+→ One Gemini Analysis
+→ Final Diagnosis or Abstention
+```
 
-Do not implement yet.
+The baseline intentionally has no executable mechanism tests, no evidence-ranking layer, and no deterministic verifier.
+
+Its purpose is to represent a reasonable one-shot LLM approach for the same KPI investigation task.
 
 ---
 
-## 11. Advanced Workflow Concept
+## 11. Advanced Workflow
 
-The advanced system will eventually use:
+The implemented advanced workflow uses:
 
+```text
 KPI Change
 → Generate Competing Hypotheses
-→ Test Hypotheses
-→ Reject Unsupported Hypotheses
-→ Verify Strongest Explanation
-→ Report Evidence or Abstain
+→ Execute Mechanism Tests
+→ Rank Evidence
+→ Gemini Evidence Review
+→ Deterministic Verification
+→ Report Dominant Cause or Abstain
+```
 
-Do not implement yet.
+The advanced workflow tests traffic, conversion-rate, price, and inventory mechanisms across business segments.
+
+Gemini reviews the structured evidence, but the final decision is controlled by deterministic verification rules.
 
 ---
 
 ## 12. Main Failure Mode
 
-The main failure mode we want to investigate is:
+The main failure mode evaluated by the benchmark is:
 
 "A plausible correlation is mistaken for the actual explanation."
 
-The benchmark should therefore test whether the system:
+The benchmark tests whether the system:
 
 - Selects misleading signals
 - Makes unsupported claims
 - Ignores competing explanations
 - Refuses to abstain when evidence is insufficient
 
-The advanced workflow should reduce these failures compared with the baseline.
+The advanced workflow is evaluated on whether it reduces these failures relative to the baseline.

@@ -25,7 +25,6 @@ PROJECT_ROOT = Path(__file__).parent
 
 CASE_DIR = PROJECT_ROOT / "benchmark" / "cases"
 BASELINE_DIR = PROJECT_ROOT / "benchmark" / "predictions" / "baseline"
-ADVANCED_DIR = PROJECT_ROOT / "benchmark" / "predictions" / "advanced"
 
 
 # ---------------------------------------------------------
@@ -227,7 +226,6 @@ st.sidebar.markdown(
 data_path = CASE_DIR / selected_case / "data.csv"
 ground_truth_path = CASE_DIR / selected_case / "ground_truth.json"
 baseline_path = BASELINE_DIR / f"{selected_case}.json"
-advanced_saved_path = ADVANCED_DIR / f"{selected_case}.json"
 
 df = pd.read_csv(data_path)
 
@@ -341,7 +339,7 @@ st.write(
 run_button = st.button(
     "🔎 Run Evidence-Backed Investigation",
     type="primary",
-    use_container_width=True,
+    width="stretch",
 )
 
 
@@ -529,7 +527,7 @@ if prediction is not None:
 
             st.dataframe(
                 evidence_display,
-                use_container_width=True,
+                width="stretch",
                 hide_index=True,
             )
 

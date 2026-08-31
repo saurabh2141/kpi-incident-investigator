@@ -435,6 +435,19 @@ Keep the response under 150 words.
         contents=prompt,
     )
 
+    usage = response.usage_metadata
+
+    input_tokens = getattr(usage, "prompt_token_count", 0) or 0
+    output_tokens = getattr(usage, "candidates_token_count", 0) or 0
+    thinking_tokens = getattr(usage, "thoughts_token_count", 0) or 0
+
+    print()
+    print("TOKEN USAGE")
+    print("-----------")
+    print(f"Input tokens: {input_tokens}")
+    print(f"Output tokens: {output_tokens}")
+    print(f"Thinking tokens: {thinking_tokens}")
+
     return response.text.strip()
 
 

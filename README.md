@@ -302,14 +302,17 @@ should be treated as approximate rather than fixed performance guarantees.
 
 Estimated Gemini API cost:
 
-```text
-Approximately $0.04 for one 12-case run of both
-the baseline and advanced workflows.
-```
+Representative measured case:
 
-This is an approximate estimate based on Gemini 2.5 Flash token pricing and
-the project's typical prompt/output sizes. Actual cost may vary with token
-usage and current API pricing.
+- Baseline: approximately $0.013 per case
+- Advanced: approximately $0.005 per case
+
+A complete 12-case run is therefore expected to be on the order of a few
+tenths of a dollar, with actual cost varying by token usage and model
+thinking.
+
+Cost figures are estimated from recorded Gemini token usage using current
+Gemini 2.5 Flash Standard pricing.
 
 ---
 
